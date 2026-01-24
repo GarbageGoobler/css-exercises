@@ -21,13 +21,29 @@
 }
 
 .header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: #393f4d;
   grid-column: 1 / 3;
+}
+
+.header>.logo {
+  text-align: left;
+}
+
+.menu {
+  align-self: center;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style: none;
+}
+
+.menu>ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .sidebar {
@@ -43,7 +59,6 @@
   border-radius: 10px;
 }
 
-
 .sidebar .side-content {
   background-color: white;
   color: black;
@@ -55,9 +70,15 @@
   background-color: #C50208;
 }
 
+.nav>ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .article {
