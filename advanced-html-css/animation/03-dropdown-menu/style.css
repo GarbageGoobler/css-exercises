@@ -25,8 +25,20 @@ ul.dropdown-menu li:hover {
   background: rgb(47, 46, 46);
 }
 
-.visible {
-  display: block;
+@keyframes expand {
+  0% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
-
+.visible {
+  display: block;
+  animation: expand 700ms ease-in-out;
+  transform-origin: top;
+}
